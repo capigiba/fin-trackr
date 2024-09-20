@@ -1,4 +1,4 @@
-package repo
+package user
 
 import (
 	"database/sql"
@@ -22,7 +22,7 @@ type UserRepo struct {
 }
 
 // NewUserRepo creates a new UserRepo
-func NewUserRepo(db *sql.DB) *UserRepo {
+func NewUserRepo(db *sql.DB) UserRepository {
 	return &UserRepo{DB: db}
 }
 

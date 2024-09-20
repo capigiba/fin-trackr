@@ -20,17 +20,6 @@ var (
 	InvalidUserIDTypeInToken  localization.LocalizedString = "error.user.invalid_userid_type_in_token"
 	UserNameAlreadyRegistered localization.LocalizedString = "error.user.username_already_registered"
 
-	// Error messages under 'error.video'
-	VideoInvalidRequest         localization.LocalizedString = "error.video.invalid_request"
-	VideoInternalServerError    localization.LocalizedString = "error.video.internal_server_error"
-	InvalidVideoID              localization.LocalizedString = "error.video.invalid_video_id"
-	VideoNotFound               localization.LocalizedString = "error.video.not_found"
-	FailedToAddVideo            localization.LocalizedString = "error.video.failed_to_add_video"
-	VideoLinkCannotBeEmpty      localization.LocalizedString = "error.video.video_link_cannot_be_empty"
-	VideoDurationMustBePositive localization.LocalizedString = "error.video.video_duration_must_be_positive"
-	VideoTitleCannotBeEmpty     localization.LocalizedString = "error.video.video_title_cannot_be_empty"
-	NoVideoForUser              localization.LocalizedString = "error.video.no_video_for_user"
-
 	// Error messages under 'error.data'
 	InsertSampleFailed              localization.LocalizedString = "error.data.insert_sample"
 	MigrationFailed                 localization.LocalizedString = "error.data.migration_failed"
@@ -55,16 +44,14 @@ var (
 	KeyNotFoundOrTypeMismatch localization.LocalizedString = "error.general.key_not_found_or_type_mismatch"
 	KeyNotFound               localization.LocalizedString = "error.general.key_not_found"
 	MessageNotFound           localization.LocalizedString = "error.general.message_not_found"
+	FailedToInitializeRouter  localization.LocalizedString = "error.general.failed_to_initialize_router"
 
 	// Success messages under 'success.user'
+	UserLogged     localization.LocalizedString = "success.user.logged"
 	UserRegistered localization.LocalizedString = "success.user.registered"
+	UserRetrieved  localization.LocalizedString = "success.user.retrieved"
 	UserUpdated    localization.LocalizedString = "success.user.updated"
 	UserDeleted    localization.LocalizedString = "success.user.deleted"
-
-	// Success messages under 'success.video'
-	VideoAdded   localization.LocalizedString = "success.video.added"
-	VideoUpdated localization.LocalizedString = "success.video.updated"
-	VideoDeleted localization.LocalizedString = "success.video.deleted"
 
 	// Success messages under 'success.general'
 	MigrationsApplied             localization.LocalizedString = "success.general.migrations_applied"
@@ -87,4 +74,5 @@ var (
 	LoadedMessagesForLanguage    localization.LocalizedString = "common.info.loaded_messages_for_language"
 	ServerShutdown               localization.LocalizedString = "common.info.server_shutdown"
 	ServerForcedShutdown         localization.LocalizedString = "common.info.server_forced_shutdown"
+	ServerExiting                localization.LocalizedString = "common.info.server_exiting"
 )

@@ -1,6 +1,14 @@
 package handler
 
-import "github.com/google/wire"
+import (
+	"fintrack/internal/handler/rest/v1/transaction"
+	"fintrack/internal/handler/rest/v1/user"
+
+	"github.com/google/wire"
+)
 
 // ProviderSetHandler is Handler providers.
-var ProviderSetHandler = wire.NewSet()
+var ProviderSetHandler = wire.NewSet(
+	user.NewUserHandler,
+	transaction.NewTransactionHandler,
+)

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fintrack/internal/domain/entity"
 	"fintrack/internal/pkg/reason"
-	repo "fintrack/internal/repo/user"
+	"fintrack/internal/repo/user"
 	"fintrack/internal/service/auth"
 
 	"golang.org/x/crypto/bcrypt"
@@ -12,12 +12,12 @@ import (
 
 // UserService handles user-related business logic
 type UserService struct {
-	userRepo    repo.UserRepository
+	userRepo    user.UserRepository
 	authService *auth.AuthService
 }
 
 // NewUserService creates a new instance of UserService
-func NewUserService(userRepo repo.UserRepository, authService *auth.AuthService) *UserService {
+func NewUserService(userRepo user.UserRepository, authService *auth.AuthService) *UserService {
 	return &UserService{
 		userRepo:    userRepo,
 		authService: authService,

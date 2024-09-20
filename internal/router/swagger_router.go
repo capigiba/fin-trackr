@@ -48,8 +48,8 @@ func (a *SwaggerRouter) Register(r *gin.RouterGroup) {
 
 // InitSwaggerDocs init swagger docs
 func (a *SwaggerRouter) InitSwaggerDocs() {
-	docs.SwaggerInfo.Title = "mlvt API"
-	docs.SwaggerInfo.Description = "API documentation for mlvt"
+	docs.SwaggerInfo.Title = "Fin-Trackr API"
+	docs.SwaggerInfo.Description = "API documentation for fin-trackr"
 	docs.SwaggerInfo.Version = "v0.0.1"
 	docs.SwaggerInfo.Host = fmt.Sprintf("%s%s", a.config.Host, a.config.Address)
 	docs.SwaggerInfo.BasePath = "/api"
