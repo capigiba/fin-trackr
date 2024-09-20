@@ -15,5 +15,5 @@
 Thumbs*.db
 tmp.env
 .env
-fintrackr.db
+fintrack.db
 .DS_Store
