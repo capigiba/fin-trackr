@@ -132,3 +132,128 @@ Key Learning Areas:
 File parsing (CSV, XLSX, etc.) in Golang.
 Algorithms for reconciling large datasets.
 Automating financial checks and balances.
+
+## Structure
+```
+.
+├── Makefile
+├── README.md
+├── assets
+│   ├── api-testing.md
+│   └── vi-README.md
+├── cmd
+│   ├── migration
+│   │   └── migrate.go
+│   └── server
+│       ├── fintrackr
+│       ├── main.go
+│       ├── wire.go
+│       └── wire_gen.go
+├── config
+│   └── config.yaml
+├── docs
+│   ├── docs.go
+│   ├── swagger.json
+│   └── swagger.yaml
+├── fintrack.db
+├── go.mod
+├── go.sum
+├── i18n
+│   └── en.yaml
+├── internal
+│   ├── domain
+│   │   ├── entity
+│   │   │   ├── transaction_entity.go
+│   │   │   └── user_entity.go
+│   │   └── model
+│   │       ├── budget_model.go
+│   │       ├── currency_model.go
+│   │       └── transaction_model.go
+│   ├── handler
+│   │   └── rest
+│   │       └── v1
+│   │           ├── currency
+│   │           │   └── currency_handler.go
+│   │           ├── handler.go
+│   │           ├── transaction
+│   │           │   └── transaction_handler.go
+│   │           └── user
+│   │               └── user_handler.go
+│   ├── infra
+│   │   ├── db
+│   │   │   ├── db.go
+│   │   │   └── provider.go
+│   │   ├── env
+│   │   │   ├── env.go
+│   │   │   └── provider.go
+│   │   ├── migrations
+│   │   │   ├── 001_create_users_table.down.sql
+│   │   │   ├── 001_create_users_table.up.sql
+│   │   │   ├── 002_create_transactions_table.down.sql
+│   │   │   ├── 002_create_transactions_table.up.sql
+│   │   │   ├── 003_insert_sample_users.down.sql
+│   │   │   └── 003_insert_sample_users.up.sql
+│   │   ├── server
+│   │   │   ├── grpc
+│   │   │   ├── http
+│   │   │   │   ├── http.go
+│   │   │   │   └── http_test.go
+│   │   │   └── server.go
+│   │   └── zap-logging
+│   │       ├── log
+│   │       │   ├── global.go
+│   │       │   ├── level.go
+│   │       │   ├── logger.go
+│   │       │   └── stdio.go
+│   │       └── zap
+│   │           ├── option.go
+│   │           ├── zap_impl.go
+│   │           └── zap_log.go
+│   ├── pkg
+│   │   ├── decimal_clone
+│   │   │   ├── README.md
+│   │   │   ├── const.go
+│   │   │   ├── decimal-go.go
+│   │   │   ├── decimal.go
+│   │   │   └── rounding.go
+│   │   ├── json
+│   │   │   └── json_handler.go
+│   │   ├── localization
+│   │   │   └── localizer.go
+│   │   ├── middleware
+│   │   │   ├── middleware.go
+│   │   │   └── provider.go
+│   │   └── reason
+│   │       └── reason.go
+│   ├── repo
+│   │   ├── currency
+│   │   │   └── currency_repo.go
+│   │   ├── provider.go
+│   │   ├── transaction
+│   │   │   └── transaction_repo.go
+│   │   └── user
+│   │       └── user_repo.go
+│   ├── router
+│   │   ├── provider.go
+│   │   ├── router.go
+│   │   └── swagger_router.go
+│   └── service
+│       ├── auth
+│       │   └── auth_service.go
+│       ├── currency
+│       │   └── currency_service.go
+│       ├── provider.go
+│       ├── transaction
+│       │   └── transaction_service.go
+│       └── user
+│           └── user_service.go
+├── logs
+│   ├── fin-trackr_err_2024-09-20.log
+│   ├── fin-trackr_err_2024-09-21.log
+│   ├── fin-trackr_info_2024-09-20.log
+│   └── fin-trackr_info_2024-09-21.log
+└── script
+    └── run_all.sh
+
+46 directories, 73 files
+```
