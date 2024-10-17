@@ -56,7 +56,7 @@ func RunMigrations(db *sql.DB) error {
 	}
 
 	for _, migrationFile := range migrationFiles {
-		filePath := filepath.Join("internal", "infra", "migrations", migrationFile)
+		filePath := filepath.Join("..", "..", "internal", "infra", "migrations", migrationFile)
 		err := RunMigration(db, filePath)
 		if err != nil {
 			return err

@@ -1,5 +1,6 @@
 # Variables
 CMD_DIR := cmd/server
+MIGRATIONS_DIR := cmd/migration
 OUTPUT_DIR := internal/wire_gen
 APP_NAME := fintrackr
 SCRIPT_DIR := script
@@ -10,6 +11,9 @@ all: build
 # Run the application
 run:
 	cd $(CMD_DIR) && go run .
+
+migration:
+	cd $(MIGRATIONS_DIR) && go run migrate.go
 
 # Build the application
 build:

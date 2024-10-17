@@ -7,6 +7,7 @@ NC='\033[0m' # No Color
 
 # Variables
 CMD_DIR="cmd/server"
+MIGRATION_DIR="cmd/migration"
 APP_NAME="fintrackr"
 
 # Function to display a message in green
@@ -58,6 +59,12 @@ cd -
 # Step 4: Generate Swagger documentation
 log_info "Step 4: Generating Swagger documentation..."
 swag init -g $CMD_DIR/main.go -o ./docs
+
+# Step 5: Apply migration to database
+log_info "Step 5: Applying Migration to database..."
+cd $MIGRATION_DIR && go run migrate.go
+
+cd -
 
 # Step 5: Run the built application
 log_info "Step 6: Running the built application..."
