@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fintrack/internal/handler/rest/v1/currency"
 	"fintrack/internal/handler/rest/v1/transaction"
 	"fintrack/internal/handler/rest/v1/user"
 
@@ -11,4 +12,5 @@ import (
 var ProviderSetHandler = wire.NewSet(
 	user.NewUserHandler,
 	transaction.NewTransactionHandler,
+	currency.NewCurrencyHandler,
 )
