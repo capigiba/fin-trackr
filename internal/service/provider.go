@@ -3,6 +3,7 @@ package service
 import (
 	"fintrack/internal/infra/env"
 	"fintrack/internal/service/auth"
+	"fintrack/internal/service/currency"
 	"fintrack/internal/service/transaction"
 	"fintrack/internal/service/user"
 
@@ -16,5 +17,6 @@ var ProviderSetService = wire.NewSet(
 	user.NewUserService,
 	transaction.NewTransactionService,
 	auth.NewAuthService,
+	currency.NewCurrencyService,
 	wire.Value(SecretKey),
 )
